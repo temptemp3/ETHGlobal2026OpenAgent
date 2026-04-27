@@ -11,6 +11,7 @@ This repository holds our **ETHGlobal 2026** build: the product, related code re
 ## Repos
 
 - [lendpay-app](https://github.com/NautilusOSS/lendpay-app) — LendPay UI (prototype)
+- [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) — pay-to-workflow demo; **microtip**–style paid run (Base: RainbowKit, wagmi, viem; see that repo for setup and env)
 
 ## Todo
 
