@@ -16,6 +16,7 @@ This repository holds our **ETHGlobal 2026** build: the product, related code re
 
 Next steps for the build. Check items off in GitHub as you finish; add or remove lines as scope changes.
 
+- [ ] Add Wallet Connection to the UI
 - [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
   - [ ] User can pay for microtip workflow execution in the app
 - [ ] Demo: recorded walkthrough or link to a live deployment for judges
