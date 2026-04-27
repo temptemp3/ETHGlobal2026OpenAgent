@@ -17,13 +17,23 @@ This repository holds our **ETHGlobal 2026** build: the product, related code re
 
 Next steps for the build. Check items off in GitHub as you finish; add or remove lines as scope changes.
 
-- [ ] Add Wallet Connection to the UI
-- [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
 - [x] **Browser x402 (end-to-end):** full **client-side** x402 flow — 402 from the API, user pays in-wallet, retry the request with payment and complete the call (see [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) for wiring toward x402 in a Base dapp)
   - <https://basescan.org/tx/0x31de8c5ff8d66494805c11b7b0fcfde508d91aaf4a89cf06d755dbb8fa5ba946>
-- [ ] **x402 + LendPay:** x402 path that includes both the **[KeeperHub](https://app.keeperhub.com) workflow fee** and the **loan-repay** payment, completed from the app (single 402, staged 402s, or batched—TBD)
+- [ ] Add Wallet Connection to the UI
+- [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
+- [ ] **x402 + LendPay:** x402 path that includes both the **[KeeperHub](https://app.keeperhub.com) workflow fee** and the **loan-repay** payment, completed from the app (single 402, staged 402s, or batched—TBD). *Blocked* — this needs **changes in KeeperHub** (not just the LendPay app) before the flow can work.
+- [ ] **x402 + LendPay (packs):** As above. Blocked on LendPay (pack selection UX, optional refund amount rules) and KeeperHub org setup (list packs, org wallet funded for refund txs)—not on dynamic-402 in the call route.
 - [ ] Demo: recorded walkthrough or link to a live deployment for judges
 - [ ] Tighten submission materials (README, repo links, prize copy)
+- [ ] Create LendPay workflow to demo pack flow with x402 (0.10 USDC pack)
+- [ ] Create LendPay workflow or LendPay workflow packs
+  - [ ] 1 USDC pack
+  - [ ] 2 USDC pack
+  - [ ] 5 USDC pack
+  - [ ] 10 USDC pack
+  - [ ] 20 USDC pack
+  - [ ] 50 USDC pack
+  - [ ] 100 USDC pack
 
 ## Target prizes
 
