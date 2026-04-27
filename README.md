@@ -19,6 +19,7 @@ Next steps for the build. Check items off in GitHub as you finish; add or remove
 
 - [x] **Browser x402 (end-to-end):** full **client-side** x402 flow — 402 from the API, user pays in-wallet, retry the request with payment and complete the call (see [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) for wiring toward x402 in a Base dapp)
   - <https://basescan.org/tx/0x31de8c5ff8d66494805c11b7b0fcfde508d91aaf4a89cf06d755dbb8fa5ba946>
+- [ ] Demonstrate payer identity for the workflow execution
 - [ ] Add Wallet Connection to the UI
 - [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
 - [ ] **x402 + LendPay:** x402 path that includes both the **[KeeperHub](https://app.keeperhub.com) workflow fee** and the **loan-repay** payment, completed from the app (single 402, staged 402s, or batched—TBD). *Blocked* — this needs **changes in KeeperHub** (not just the LendPay app) before the flow can work.
