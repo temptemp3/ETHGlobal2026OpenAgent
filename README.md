@@ -1,6 +1,6 @@
 # ETHGlobal2026OpenAgent
 
-This repository holds our **ETHGlobal 2026** build: the product, related code repos, a work log, target prizes, team, and use-of-AI notes.
+This repository holds our **ETHGlobal 2026** build: the product, related code repos, a running task list, a work log, target prizes, team, and use-of-AI notes.
 
 ## Project idea
 
@@ -11,6 +11,15 @@ This repository holds our **ETHGlobal 2026** build: the product, related code re
 ## Repos
 
 - [lendpay-app](https://github.com/NautilusOSS/lendpay-app) — LendPay UI (prototype)
+
+## Todo
+
+Next steps for the build. Check items off in GitHub as you finish; add or remove lines as scope changes.
+
+- [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
+  - [ ] User can pay for microtip workflow execution in the app
+- [ ] Demo: recorded walkthrough or link to a live deployment for judges
+- [ ] Tighten submission materials (README, repo links, prize copy)
 
 ## Target prizes
 
