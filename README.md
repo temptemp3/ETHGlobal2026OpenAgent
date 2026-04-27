@@ -1,12 +1,16 @@
 # ETHGlobal2026OpenAgent
 
-This repository holds our **ETHGlobal 2026** build: the product, a work log, target prizes, team, and use-of-AI notes.
+This repository holds our **ETHGlobal 2026** build: the product, related code repos, a work log, target prizes, team, and use-of-AI notes.
 
 ## Project idea
 
 **LendPay** lets a user **repay DeFi loans with USDC** across supported networks **in one workflow**, instead of juggling bridges, dApps, and per-chain steps by hand. Execution and automation run through [KeeperHub](https://app.keeperhub.com) (workflows, wallet, and follow-up in the app).
 
 *Status:* UI prototype in progress.
+
+## Repos
+
+- [lendpay-app](https://github.com/NautilusOSS/lendpay-app) — LendPay UI (prototype)
 
 ## Target prizes
 
