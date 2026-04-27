@@ -20,6 +20,8 @@ Next steps for the build. Check items off in GitHub as you finish; add or remove
 - [ ] Add Wallet Connection to the UI
 - [ ] End-to-end repay path exercised through [KeeperHub](https://app.keeperhub.com) (workflow + wallet)
   - [ ] User can pay for microtip workflow execution in the app
+- [x] **Browser x402 (end-to-end):** full **client-side** x402 flow — 402 from the API, user pays in-wallet, retry the request with payment and complete the call (see [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) for wiring toward x402 in a Base dapp)
+  - <https://basescan.org/tx/0x31de8c5ff8d66494805c11b7b0fcfde508d91aaf4a89cf06d755dbb8fa5ba946>
 - [ ] Demo: recorded walkthrough or link to a live deployment for judges
 - [ ] Tighten submission materials (README, repo links, prize copy)
 
