@@ -59,6 +59,7 @@ Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workfl
 - [ ] Add Wallet Connection to the UI
 - [ ] Demo: recorded walkthrough or link to a live deployment for judges
 - [ ] Tighten submission materials (README, repo links, prize copy)
+- [ ] Workflow gateway demo using KeeperHub
 
 ## Target prizes
 
@@ -100,7 +101,7 @@ Running notes from the build: decisions, blockers, demos, and what changed when.
   - **x402 + LendPay (packs)** — LendPay (pack UX, optional refund rules) and KeeperHub org (list packs, org wallet for refund txs); not blocked on dynamic-402 in the call route; also gated on gateway
   - **KeeperHub workflows / packs** — workflow to demo **0.10 USDC** pack with x402; workflows or tiers **1, 2, 5, 10, 20, 50, 100 USDC**
 
-### 2026-04-29 — Payment path and workflow gateway
+### 2026-04-30 — Payment path and workflow gateway
 
 ## Team
 
