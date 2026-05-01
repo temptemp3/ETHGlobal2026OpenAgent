@@ -57,10 +57,9 @@ flowchart TD
 
 Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workflow gateway** payment path (while **KeeperHub** still runs execution) is written under **2026-04-28** in the [Hackathon log](#hackathon-log), not as a separate README section.
 
-- [x] Demonstrate payer identity for the workflow execution
-- [x] Add Wallet Connection to the UI
-- [x] Demo: recorded walkthrough or link to a live deployment for judges
-- [x] Tighten submission materials (README, repo links, prize copy)
+- [ ] UI: Add Wallet Connection to the UI
+- [ ] Demo: recorded walkthrough or link to a live deployment for judges
+- [ ] Submission:Tighten submission materials (README, repo links, prize copy)
 - [ ] Workflow gateway demo using KeeperHub
 
 ## Target prizes
