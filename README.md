@@ -78,7 +78,7 @@ Running notes from the build: decisions, blockers, demos, and what changed when.
 ### 2026-05-01 — UI integration, demo, and submission
 
 - Demonstrate payer identity for the workflow execution
-  - <https://x.com/NicholasShella2/status/2050234335870214574>
+  - [repayment of USDC loan from Base on Algorand using KeeperHub](https://lora.algokit.io/mainnet/block/60765685/group/t10tFy3EApfJxLPg7LmecUlYH8sRsUIQeN43b6n8pUA%3D)
 
 ### 2026-04-30 — Payment path and workflow gateway
 
