@@ -12,11 +12,12 @@ This repository holds our **ETHGlobal 2026** build: the product, related code re
 
 - [lendpay-app](https://github.com/NautilusOSS/lendpay-app) — LendPay UI (prototype)
 - [lendpay-backend](https://github.com/NautilusOSS/lendpay-backend) — LendPay backend (API / server for app and x402 flows)
-- [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) — pay-to-workflow demo; **microtip**–style paid run (Base: RainbowKit, wagmi, viem; see that repo for setup and env)
+- [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1) — pay-to-workflow demo; **microtip**–style paid run (Base: RainbowKit, wagmi, viem; see that repo for setup and env). Its UI was used to **test** pay-to-workflow behavior **before** wiring the same flows into [lendpay-app](https://github.com/NautilusOSS/lendpay-app).
+- [lendpay-gateway-algorand-dorkfi](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi) — LendPay **workflow gateway** (Algorand + DorkFi; routes payments into runs alongside [KeeperHub](https://app.keeperhub.com))
 
 ## Architecture
 
-High-level flow: user and [lendpay-app](https://github.com/NautilusOSS/lendpay-app) → workflow config → x402 on Base → [lendpay-backend](https://github.com/NautilusOSS/lendpay-backend) → [KeeperHub](https://app.keeperhub.com) execution → protocols and receipts back to the UI.
+High-level flow: user and [lendpay-app](https://github.com/NautilusOSS/lendpay-app) → workflow config → x402 on Base → [lendpay-backend](https://github.com/NautilusOSS/lendpay-backend) → [KeeperHub](https://app.keeperhub.com) runs the workflow. **Repay gateways** (e.g. [lendpay-gateway-algorand-dorkfi](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi)) are **standalone processes**: they are **entry points** exposed as **HTTP URLs** that a **KeeperHub workflow step** calls as **webhooks**. The gateway handles chain- or stack-specific work; results and receipts still flow back through the API and UI.
 
 ```mermaid
 flowchart TD
@@ -35,7 +36,8 @@ flowchart TD
   PAY -->|valid payment| WF
   WF --> KH[KeeperHub]
 
-  KH --> EXEC[Workflow Execution Agent]
+  KH -->|workflow step: HTTP webhook| GW[Repay gateways — standalone entrypoints]
+  GW --> EXEC[Workflow Execution Agent]
 
   EXEC --> AAVE[Aave / Lending Protocol]
   EXEC --> OTHER[Other DeFi Protocols]
@@ -55,10 +57,10 @@ flowchart TD
 
 Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workflow gateway** payment path (while **KeeperHub** still runs execution) is written under **2026-04-28** in the [Hackathon log](#hackathon-log), not as a separate README section.
 
-- [ ] Demonstrate payer identity for the workflow execution
-- [ ] Add Wallet Connection to the UI
-- [ ] Demo: recorded walkthrough or link to a live deployment for judges
-- [ ] Tighten submission materials (README, repo links, prize copy)
+- [x] Demonstrate payer identity for the workflow execution
+- [x] Add Wallet Connection to the UI
+- [x] Demo: recorded walkthrough or link to a live deployment for judges
+- [x] Tighten submission materials (README, repo links, prize copy)
 - [ ] Workflow gateway demo using KeeperHub
 
 ## Target prizes
@@ -74,34 +76,45 @@ Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workfl
 
 Running notes from the build: decisions, blockers, demos, and what changed when. Newest day on top. Keep entries short; link PRs, issues, or doc sections when they exist.
 
-### 2026-04-24 — Start
+### 2026-05-01 — UI integration, demo, and submission
 
-- Exploratory research on KeeperHub workflow execution for agents including:
-  - Workflow creation
-  - Paid workflow execution using the KeeperHub wallet
-  - Dev environment setup
+- Demonstrate payer identity for the workflow execution
+  - <https://x.com/NicholasShella2/status/2050234335870214574>
 
-### 2026-04-25 - 2026-04-26 — Project Ideas
+### 2026-04-30 — Payment path and workflow gateway
 
-- Consider project idea after exploratory research
-
-### 2026-04-27 — Kickoff UI (prototype) + Project Idea
-
-- Finalize project idea: **LendPay** (see [Project idea](#project-idea))
-- Build UI prototype for LendPay
+- **GitHub (2026-04-30):** commit activity on each remote’s default branch (`main`); links point at **github.com** (single commits or history).
+  - **[ETHGlobal2026OpenAgent](https://github.com/temptemp3/ETHGlobal2026OpenAgent)** — [`52a3aa6`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/52a3aa6): README gateway-demo [Todo](#todo) item; hackathon log day bump
+  - **[lendpay-backend](https://github.com/NautilusOSS/lendpay-backend)** — [`5ddee4a`](https://github.com/NautilusOSS/lendpay-backend/commit/5ddee4a): `feat(gateway)` integrate **KeeperHub simple-workflow** with **settlement payload**
+  - **[openagent-demo1](https://github.com/NautilusOSS/openagent-demo1)** — [`1a6357b`](https://github.com/NautilusOSS/openagent-demo1/commit/1a6357b), [`ebeba9e`](https://github.com/NautilusOSS/openagent-demo1/commit/ebeba9e): **KeeperHub workflows**, **x402 gateway** panel, **LendPay presets**; execute panel sends **`benefactorAddress`** for gateway calls
+  - **[lendpay-gateway-algorand-dorkfi](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi)** — **8 commits** that day on GitHub ([`main` commit history](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi/commits/main)): **DorkFi repay gateway** (Base receipt → Algorand repay); optional **webhook API keys** + key docs; **repay flow** / **systemd** guides; Algorand **`.env.example`** (Nodely); **`PAYMENT_MAX_AGE_SECONDS=0`** = no age limit
 
 ### 2026-04-28 — Backend, architecture, and payment path
 
 - Linked **[lendpay-backend](https://github.com/NautilusOSS/lendpay-backend)** in [Repos](#repos) (API / x402 server alongside [lendpay-app](https://github.com/NautilusOSS/lendpay-app))
 - Added [Architecture](#architecture) section with a **Mermaid** flowchart (web app → workflow config → x402 on Base → LendPay API → KeeperHub → execution → refunds / logs)
-- **[Todo](#todo):** active list only — `[x]` **Browser x402** with [Base proof](https://basescan.org/tx/0x31de8c5ff8d66494805c11b7b0fcfde508d91aaf4a89cf06d755dbb8fa5ba946); open: payer identity, wallet, demo, submission
+- **[Todo](#todo):** **Browser x402** with [Base proof](https://basescan.org/tx/0x31de8c5ff8d66494805c11b7b0fcfde508d91aaf4a89cf06d755dbb8fa5ba946) **done**; payer identity, wallet, demo, and submission materials **completed** by submission (see [2026-05-01](#2026-05-01--ui-integration-demo-and-submission))
 - **Deferred payment-path backlog** (recorded here instead of a separate README section): the exact **payment path** waits on the **LendPay workflow gateway**; **KeeperHub** still runs **workflow execution**. Until the gateway is clear, we are not tracking these in active Todo:
   - **End-to-end repay** through [KeeperHub](https://app.keeperhub.com) (workflow + wallet) — after gateway routes payments into runs
   - **x402 + LendPay** — **[KeeperHub](https://app.keeperhub.com) workflow fee** + **loan-repay** from the app (single 402, staged 402s, or batched—TBD). *Blocked* on **KeeperHub** (not LendPay-only); also gated on gateway
   - **x402 + LendPay (packs)** — LendPay (pack UX, optional refund rules) and KeeperHub org (list packs, org wallet for refund txs); not blocked on dynamic-402 in the call route; also gated on gateway
   - **KeeperHub workflows / packs** — workflow to demo **0.10 USDC** pack with x402; workflows or tiers **1, 2, 5, 10, 20, 50, 100 USDC**
 
-### 2026-04-30 — Payment path and workflow gateway
+### 2026-04-27 — Kickoff UI (prototype) + Project Idea
+
+- Finalize project idea: **LendPay** (see [Project idea](#project-idea))
+- Build UI prototype for LendPay
+
+### 2026-04-25 - 2026-04-26 — Project Ideas
+
+- Consider project idea after exploratory research
+
+### 2026-04-24 — Start
+
+- Exploratory research on KeeperHub workflow execution for agents including:
+  - Workflow creation
+  - Paid workflow execution using the KeeperHub wallet
+  - Dev environment setup
 
 ## Team
 
