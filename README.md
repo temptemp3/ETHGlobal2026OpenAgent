@@ -75,10 +75,16 @@ Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workfl
 
 Running notes from the build: decisions, blockers, demos, and what changed when. Newest day on top. Keep entries short; link PRs, issues, or doc sections when they exist.
 
+### 2026-05-02 — Submission
+
 ### 2026-05-01 — UI integration, demo, and submission
 
 - Demonstrate payer identity for the workflow execution
   - [repayment of USDC loan from Base on Algorand using KeeperHub](https://lora.algokit.io/mainnet/block/60765685/group/t10tFy3EApfJxLPg7LmecUlYH8sRsUIQeN43b6n8pUA%3D)
+- **GitHub (2026-05-01):** other same-day commits on `main` (local `git log` window `2026-05-01` → `2026-05-02`; no new commits that day in local **openagent-demo1** or **lendpay-app** clones — check [lendpay-app](https://github.com/NautilusOSS/lendpay-app/commits/main) / [openagent-demo1](https://github.com/NautilusOSS/openagent-demo1/commits/main) on GitHub if needed):
+  - **[ETHGlobal2026OpenAgent](https://github.com/temptemp3/ETHGlobal2026OpenAgent)** — **3 commits:** [`d372089`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/d372089) README gateway architecture + hackathon log reorder; [`2f26f53`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/2f26f53) fix TODO section; [`d0b1c69`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/d0b1c69) fix link
+  - **[lendpay-backend](https://github.com/NautilusOSS/lendpay-backend)** — [`795f2f4`](https://github.com/NautilusOSS/lendpay-backend/commit/795f2f4): `feat(workflows)` add **benefactorAddress** with **EVM or Algorand** validation
+  - **[lendpay-gateway-algorand-dorkfi](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi)** — [`7325a31`](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi/commit/7325a31): repay **atomic group** (ulujs + arccjs), NT200 deposit, ARC200 approve, repay-on-behalf; group resource sharing, optional balance-box / retries, mainnet beacon
 
 ### 2026-04-30 — Payment path and workflow gateway
 
@@ -87,6 +93,7 @@ Running notes from the build: decisions, blockers, demos, and what changed when.
   - **[lendpay-backend](https://github.com/NautilusOSS/lendpay-backend)** — [`5ddee4a`](https://github.com/NautilusOSS/lendpay-backend/commit/5ddee4a): `feat(gateway)` integrate **KeeperHub simple-workflow** with **settlement payload**
   - **[openagent-demo1](https://github.com/NautilusOSS/openagent-demo1)** — [`1a6357b`](https://github.com/NautilusOSS/openagent-demo1/commit/1a6357b), [`ebeba9e`](https://github.com/NautilusOSS/openagent-demo1/commit/ebeba9e): **KeeperHub workflows**, **x402 gateway** panel, **LendPay presets**; execute panel sends **`benefactorAddress`** for gateway calls
   - **[lendpay-gateway-algorand-dorkfi](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi)** — **8 commits** that day on GitHub ([`main` commit history](https://github.com/NautilusOSS/lendpay-gateway-algorand-dorkfi/commits/main)): **DorkFi repay gateway** (Base receipt → Algorand repay); optional **webhook API keys** + key docs; **repay flow** / **systemd** guides; Algorand **`.env.example`** (Nodely); **`PAYMENT_MAX_AGE_SECONDS=0`** = no age limit
+  - **[lendpay-app](https://github.com/NautilusOSS/lendpay-app)** — LendPay web UI **created in [Lovable](https://lovable.dev)** (Vite + React + TypeScript; ongoing work on [`main`](https://github.com/NautilusOSS/lendpay-app/commits/main))
 
 ### 2026-04-28 — Backend, architecture, and payment path
 
