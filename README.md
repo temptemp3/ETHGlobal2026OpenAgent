@@ -72,6 +72,7 @@ Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workfl
 ## Links
 
 - **[LendPay — ETHGlobal Showcase](https://ethglobal.com/showcase/lendpay-b22j8)** — **Open Agents** submission page (project story, **Live Demo**, **Source Code**)
+- **[LendPay demo (YouTube)](https://www.youtube.com/watch?v=5CFLk3lb_MA)** — walkthrough video
 
 ## Hackathon log
 
@@ -84,6 +85,7 @@ Running notes from the build: decisions, blockers, demos, and what changed when.
 ### 2026-05-02 — Submission
 
 - **[ETHGlobal showcase — LendPay](https://ethglobal.com/showcase/lendpay-b22j8)** — official **Open Agents** hackathon submission (also in [Links](#links))
+  - **Demo video (YouTube):** [watch on YouTube](https://www.youtube.com/watch?v=5CFLk3lb_MA)
 - **GitHub (2026-05-02):** local `git log` window `2026-05-02` → `2026-05-03` (no commits that day in local **lendpay-backend**, **openagent-demo1**, or **dorkfi-gateway** clones):
   - **[lendpay-app](https://github.com/NautilusOSS/lendpay-app)** — **11 commits** on `main` ([history](https://github.com/NautilusOSS/lendpay-app/commits/main)): **DorkFi**-driven **repay amounts**, step 2 **fetch Algorand borrow**, step 3 **min / validation**, **remove pack step** ([`73c81b5`](https://github.com/NautilusOSS/lendpay-app/commit/73c81b5), [`4ed6871`](https://github.com/NautilusOSS/lendpay-app/commit/4ed6871)); **512×512 LP logo**, **cover image**, favicon raster pipeline ([`fa150fd`](https://github.com/NautilusOSS/lendpay-app/commit/fa150fd), [`8e5e318`](https://github.com/NautilusOSS/lendpay-app/commit/8e5e318), [`96c1cae`](https://github.com/NautilusOSS/lendpay-app/commit/96c1cae)); **site info** for publish ([`c7b75cd`](https://github.com/NautilusOSS/lendpay-app/commit/c7b75cd)); plus Lovable **“Changes”** sync commits
   - **[ETHGlobal2026OpenAgent](https://github.com/temptemp3/ETHGlobal2026OpenAgent)** — [`57230bd`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/57230bd): README hackathon log (2026-05-01 GitHub lines, 2026-05-02 stub, **lendpay-app** on 2026-04-30)
