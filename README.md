@@ -133,7 +133,7 @@ How AI helped on this project; we update this as the build evolves.
 **Tools**
 
 - [ChatGPT](https://chatgpt.com) — project naming brainstorm, early UI spec notes, logo and branding exploration, architecture documentation
-- [Lovable](https://lovable.dev) — UI prototype
+- [Lovable](https://lovable.dev) — UI prototype; **logo** and **cover image** generation
 - [Cursor](https://cursor.com) — coding assistance, workflow generation via KeeperHub MCP
 
 **Verified by hand**
