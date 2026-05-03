@@ -1,6 +1,6 @@
 # ETHGlobal2026OpenAgent
 
-This repository holds our **ETHGlobal 2026** build: the product, related code repos, a running [Todo](#todo) list, a work log (including deferred payment-path notes by day), target prizes, team, and use-of-AI notes. **Work window:** all submission work was done **from 2026-04-24** through **before the official submission deadline** — see [Hackathon log](#hackathon-log).
+This repository holds our **ETHGlobal 2026** build: the product, related code repos, a running [Todo](#todo) list, a work log (including deferred payment-path notes by day), [Links](#links), target prizes, team, and use-of-AI notes. **Work window:** all submission work was done **from 2026-04-24** through **before the official submission deadline** — see [Hackathon log](#hackathon-log).
 
 ## Project idea
 
@@ -69,13 +69,24 @@ Active build tasks. Check `[x]` when done. Work deferred on the **LendPay workfl
   - Best Use of KeeperHub
   - Builder Feedback Bounty
 
+## Links
+
+- **[LendPay — ETHGlobal Showcase](https://ethglobal.com/showcase/lendpay-b22j8)** — **Open Agents** submission page (project story, **Live Demo**, **Source Code**)
+
 ## Hackathon log
 
 **Submission timing:** All work for this **ETHGlobal 2026** entry was completed **from 2026-04-24** (first log day, hackathon start) **through before the event’s official submission deadline** (per hackathon rules).
 
 Running notes from the build: decisions, blockers, demos, and what changed when. Newest day on top. Keep entries short; link PRs, issues, or doc sections when they exist.
 
+### 2026-05-03 — Demo day
+
 ### 2026-05-02 — Submission
+
+- **[ETHGlobal showcase — LendPay](https://ethglobal.com/showcase/lendpay-b22j8)** — official **Open Agents** hackathon submission (also in [Links](#links))
+- **GitHub (2026-05-02):** local `git log` window `2026-05-02` → `2026-05-03` (no commits that day in local **lendpay-backend**, **openagent-demo1**, or **dorkfi-gateway** clones):
+  - **[lendpay-app](https://github.com/NautilusOSS/lendpay-app)** — **11 commits** on `main` ([history](https://github.com/NautilusOSS/lendpay-app/commits/main)): **DorkFi**-driven **repay amounts**, step 2 **fetch Algorand borrow**, step 3 **min / validation**, **remove pack step** ([`73c81b5`](https://github.com/NautilusOSS/lendpay-app/commit/73c81b5), [`4ed6871`](https://github.com/NautilusOSS/lendpay-app/commit/4ed6871)); **512×512 LP logo**, **cover image**, favicon raster pipeline ([`fa150fd`](https://github.com/NautilusOSS/lendpay-app/commit/fa150fd), [`8e5e318`](https://github.com/NautilusOSS/lendpay-app/commit/8e5e318), [`96c1cae`](https://github.com/NautilusOSS/lendpay-app/commit/96c1cae)); **site info** for publish ([`c7b75cd`](https://github.com/NautilusOSS/lendpay-app/commit/c7b75cd)); plus Lovable **“Changes”** sync commits
+  - **[ETHGlobal2026OpenAgent](https://github.com/temptemp3/ETHGlobal2026OpenAgent)** — [`57230bd`](https://github.com/temptemp3/ETHGlobal2026OpenAgent/commit/57230bd): README hackathon log (2026-05-01 GitHub lines, 2026-05-02 stub, **lendpay-app** on 2026-04-30)
 
 ### 2026-05-01 — UI integration, demo, and submission
 
